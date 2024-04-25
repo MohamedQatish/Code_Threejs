@@ -12,9 +12,7 @@ let controls, water, sun;
 
 const loader = new GLTFLoader();
 
-function random(min, max) {
-  return Math.random() * (max - min) + min;
-}
+
 
 class Boat {
   constructor() {
@@ -55,7 +53,6 @@ async function loadModel(url) {
   });
 }
 
-let boatModel = null;
 
 init();
 animate();
