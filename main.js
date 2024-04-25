@@ -16,7 +16,7 @@ const loader = new GLTFLoader();
 
 class Boat {
   constructor() {
-    loader.load("assets/boat/scene.gltf", (gltf) => {
+    loader.load("helpers/boat/scene.gltf", (gltf) => {
       scene.add(gltf.scene);
       gltf.scene.scale.set(3, 3, 3);
       gltf.scene.position.set(5, 13, 50);
@@ -80,7 +80,7 @@ async function init() {
     textureWidth: 512,
     textureHeight: 512,
     waterNormals: new THREE.TextureLoader().load(
-      "assets/waternormals.jpg",
+      "helpers/waternormals.jpg",
       function (texture) {
         texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
       }
